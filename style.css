@@ -517,6 +517,27 @@ button {
   line-height: 1.62;
 }
 
+.feature-illustration {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+  border-radius: 1.1rem;
+  background: rgba(2, 6, 23, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 1.5rem;
+  box-shadow: inset 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.how-illustration {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  background: rgba(2, 6, 23, 0.2);
+  border-radius: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+}
+
 .how-section {
   background: linear-gradient(180deg, rgba(17, 22, 29, 0.98), rgba(13, 17, 23, 1));
 }
