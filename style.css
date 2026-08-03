@@ -343,6 +343,24 @@ button {
   line-height: 1.75;
 }
 
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.trust-badges .badge {
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.08);
+  padding: 0.35rem 0.85rem;
+  color: var(--accent-bright);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
 .section-kicker {
   display: inline-flex;
   width: fit-content;
