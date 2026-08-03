@@ -514,7 +514,8 @@ button {
   box-shadow: 0 18px 55px rgba(0, 0, 0, 0.16);
 }
 
-.feature-rail article span {
+.feature-rail article span,
+.how-grid article span {
   color: var(--accent-bright);
   font-size: 0.72rem;
   font-weight: 850;
