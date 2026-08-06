@@ -88,23 +88,19 @@ button {
 }
 
 .brand-mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent);
-  color: white;
-  font-weight: 900;
-  box-shadow: 0 14px 30px -18px rgba(15, 118, 110, 0.55);
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: block;
+  flex: 0 0 auto;
+  object-fit: contain;
+  box-shadow: 0 14px 30px -18px rgba(124, 58, 237, 0.55);
 }
 
 .brand-mark.small {
-  width: 30px;
-  height: 30px;
-  border-radius: 9px;
-  font-size: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
 }
 
 .brand-title,
@@ -273,7 +269,7 @@ button {
   max-width: 880px;
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(3.25rem, 8.2vw, 7.2rem);
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
   font-weight: 600;
   line-height: 1.03;
   letter-spacing: -0.01em;
@@ -452,6 +448,11 @@ button {
   object-fit: cover;
   object-position: center;
   filter: brightness(0.92) saturate(0.96) contrast(1.01);
+}
+
+.product-shot.crisis-shot img {
+  object-fit: contain;
+  background: #edf2ef;
 }
 
 .metric-card {
