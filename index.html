@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restidsanalys - geografiskt beslutsstöd</title>
-  <meta name="description" content="Restidsanalys visar räckvidd, kris och förstärkning med verkliga restider, befolkning och servicepunkter.">
+  <title>Restidsanalys – Geografiskt beslutsstöd</title>
+  <meta name="description" content="Restidsanalys är ett beslutsstöd för kommuner, regioner och samhällsplanering. Förstå tillgänglighet, analysera störningar och testa framtida förbindelser.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <nav class="nav" aria-label="Huvudnavigation">
     <div class="nav-inner">
       <a href="#top" class="brand" aria-label="Restidsanalys startsida">
-        <img class="brand-mark" src="assets/svg/restidsanalys-logo-symbol.svg" alt="" width="48" height="48">
+        <img class="brand-mark" src="assets/svg/restidsanalys-logo-symbol.svg" alt="" width="40" height="40">
         <span>
           <span class="brand-title">Restidsanalys</span>
           <span class="brand-subtitle">Geografisk beslutsanalys</span>
@@ -28,9 +29,11 @@
   </nav>
 
   <main id="top">
+
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-media">
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-label="Animerad kartvy för Restidsanalys">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-label="Kartvy Restidsanalys">
           <source src="assets/video/hero.mp4" type="video/mp4">
         </video>
       </div>
@@ -38,233 +41,391 @@
       <div class="hero-grid"></div>
       <div class="hero-glow hero-glow-one"></div>
       <div class="hero-glow hero-glow-two"></div>
-
       <div class="hero-content">
-        <h1>Hur många invånare når er på <span>15 minuter?</span></h1>
+        <span class="kicker">Beslutsstöd för samhällsplanering</span>
+        <h1>Hur många invånare når er på <em>15 minuter?</em></h1>
         <p>
           Se exakt vilka invånare, skolor och vårdpunkter som nås inom verkliga restider.
-          Ta fram färdiga beslutsunderlag på ett par knapptryckningar – helt utan konsulter eller GIS-specialister.
+          Ta fram färdiga beslutsunderlag på ett par knapptryckningar — helt utan GIS-specialister.
         </p>
         <div class="hero-actions">
           <button type="button" class="btn btn-primary" data-open-contact>Boka demo</button>
           <button type="button" class="btn btn-secondary" id="heroLoginButton">Logga in</button>
-          <a href="#how" class="btn btn-ghost">Se hur det fungerar</a>
+          <a href="#reach" class="btn btn-ghost">Se hur det fungerar</a>
         </div>
       </div>
     </section>
 
+    <!-- AUDIENCE -->
     <section class="audience-band">
       <div class="audience-inner">
         <div>
-          <span class="section-kicker">Byggt för beslutsunderlag</span>
+          <span class="kicker">Byggt för beslutsunderlag</span>
           <h2>Från kartbild till analysstory.</h2>
         </div>
         <div>
           <p>
-            Restidsanalys samlar tillgänglighet, service, störning och scenariojämförelser i en arbetsyta
-            för kommuner, regioner, konsulter och samhällsplanering.
+            Restidsanalys samlar tillgänglighet, service, störning och scenariojämförelser
+            i en arbetsyta — för kommuner, regioner, konsulter och samhällsplanering.
           </p>
-          <div class="trust-badges">
-            <span class="badge">SCB Befolkningsrutnät</span>
-            <span class="badge">Trafiklab Realtime</span>
-            <span class="badge">OpenStreetMap</span>
-            <span class="badge">Valhalla Engine</span>
+          <div class="trust-row">
+            <span class="trust-pill">SCB Befolkningsrutnät</span>
+            <span class="trust-pill">Trafiklab Realtime</span>
+            <span class="trust-pill">OpenStreetMap</span>
+            <span class="trust-pill">Valhalla Engine</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="reach" class="feature-section">
-      <div class="section-header">
-        <span class="section-kicker">Räckvidd</span>
-        <h2>Vad nås från en plats, och av hur många?</h2>
-        <p>
-          Se restidszoner, befolkningsunderlag och serviceåtkomst. Inte bara avstånd, utan verklig tillgänglighet.
-        </p>
-      </div>
-      <div class="feature-grid">
-        <div class="product-shot">
-          <img src="assets/landing-preview/bas-light.webp" alt="Räckviddsanalys i Restidsanalys">
-          <div class="metric-card">
-            <span>Räckvidd 30 min</span>
-            <strong>62 671</strong>
-            <small>invånare nåbara</small>
-          </div>
+    <!-- PRODUCT OVERVIEW -->
+    <section class="overview-section">
+      <div class="overview-inner">
+        <div class="overview-label">
+          <span class="kicker">Plattformen</span>
+          <p>En komplett arbetsyta för tillgänglighets&shy;analys, störnings&shy;scenarion och beslutsunderlag.</p>
         </div>
-        <div class="feature-rail">
-          <article>
-            <span>01</span>
-            <h3>Starta från valfri plats</h3>
-            <p>Adress, servicepunkt eller vald plats i kartan.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Jämför färdsätt</h3>
-            <p>Gång, cykel, bil och kollektivtrafik i samma beslutsflöde.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Kvantifiera effekten</h3>
-            <p>Befolkning, skolor och vårdpunkter summeras per tidszon.</p>
-          </article>
+        <div class="app-frame overview-frame">
+          <div class="app-frame-bar">
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-bar-title">Restidsanalys — Översikt</span>
+          </div>
+          <img class="app-frame-img" src="assets/images/landing-product-overview.png" alt="Restidsanalys produktöversikt — komplett applikationsvy">
         </div>
       </div>
     </section>
 
-    <section id="crisis" class="feature-section feature-section-alt">
-      <div class="section-header">
-        <span class="section-kicker">Kris &amp; störning</span>
-        <h2>Vad försvinner när en väg bryts?</h2>
-        <p>
-          Rita en störningskorridor och se direkt vilken befolkning, service och tillgänglighet som påverkas.
-        </p>
-      </div>
-      <div class="feature-grid reverse">
-        <div class="feature-rail">
-          <article>
-            <span>01</span>
-            <h3>Markera avbrott</h3>
-            <p>Rita vägsträckan eller korridoren som berörs.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Jämför före och efter</h3>
-            <p>Se tappad räckvidd och omledning med tydliga konsekvenser.</p>
-          </article>
+    <!-- RÄCKVIDD -->
+    <section id="reach" class="feature-block wide">
+      <div class="feature-inner">
+        <div class="app-frame">
+          <div class="app-frame-bar">
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-bar-title">Räckviddsanalys — Restidsanalys</span>
+          </div>
+          <img class="app-frame-img" src="assets/images/landing-bas-desktop.png" alt="Räckviddsanalys i Restidsanalys">
         </div>
-        <div class="product-shot crisis-shot">
-          <img src="assets/landing-preview/kris-light.webp" alt="Krisanalys med störning och omledning">
-          <div class="metric-card danger">
-            <span>Påverkan vid avbrott</span>
-            <strong>6 575</strong>
-            <small>invånare påverkas</small>
+        <div class="feature-text">
+          <span class="kicker">Räckvidd</span>
+          <h2>Vad nås från en plats, och av hur många?</h2>
+          <p>
+            Se restidszoner, befolkningsunderlag och serviceåtkomst.
+            Inte bara avstånd — utan verklig tillgänglighet med riktiga färdtider.
+          </p>
+          <div class="step-list">
+            <div class="step-item">
+              <span class="step-num">01</span>
+              <div class="step-body">
+                <h3>Starta från valfri plats</h3>
+                <p>Adress, servicepunkt eller vald plats i kartan.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">02</span>
+              <div class="step-body">
+                <h3>Jämför färdsätt</h3>
+                <p>Gång, cykel, bil och kollektivtrafik i samma beslutsflöde.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">03</span>
+              <div class="step-body">
+                <h3>Kvantifiera effekten</h3>
+                <p>Befolkning, skolor och vårdpunkter summeras per tidszon.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="reinforcement" class="feature-section">
-      <div class="section-header">
-        <span class="section-kicker">Förstärkning</span>
-        <h2>Visa effekten av en ny förbindelse.</h2>
-        <p>
-          Testa nya länkar och jämför hur reach, serviceåtkomst och befolkningsunderlag förändras.
-        </p>
-      </div>
-      <div class="feature-grid">
-        <div class="product-shot">
-          <img src="assets/landing-preview/forstarkning-light.webp" alt="Förstärkningsanalys i Restidsanalys">
-          <div class="metric-card success">
-            <span>Förstärkning</span>
-            <strong>+172</strong>
-            <small>fler invånare nås</small>
+    <!-- KRIS & STÖRNING -->
+    <section id="crisis" class="feature-block alt wide">
+      <div class="feature-inner">
+        <div class="app-frame">
+          <div class="app-frame-bar">
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-bar-title">Krisanalys — Restidsanalys</span>
           </div>
+          <img class="app-frame-img" src="assets/images/landing-kris-desktop.png" alt="Krisanalys med störning och omledning">
         </div>
-        <div class="feature-rail">
-          <article>
-            <span>01</span>
-            <h3>Skissa ny länk</h3>
-            <p>Placera en ny koppling mellan två punkter.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Mät tillkommen nytta</h3>
-            <p>Se hur tillgängligheten förändras i människor och service.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Ta vidare underlaget</h3>
-            <p>Exportera och använd i dialog, GIS och rapporter.</p>
-          </article>
+        <div class="feature-text">
+          <span class="kicker">Kris &amp; störning</span>
+          <h2>Vad försvinner när en väg bryts?</h2>
+          <p>
+            Rita en störningskorridor och se direkt vilken befolkning,
+            service och tillgänglighet som påverkas.
+          </p>
+          <div class="step-list">
+            <div class="step-item">
+              <span class="step-num">01</span>
+              <div class="step-body">
+                <h3>Markera avbrott</h3>
+                <p>Rita vägsträckan eller korridoren som berörs.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">02</span>
+              <div class="step-body">
+                <h3>Jämför före och efter</h3>
+                <p>Se tappad räckvidd och omledning med tydliga konsekvenser.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- FÖRSTÄRKNING -->
+    <section id="reinforcement" class="feature-block wide">
+      <div class="feature-inner">
+        <div class="app-frame">
+          <div class="app-frame-bar">
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-bar-title">Förstärkningsanalys — Restidsanalys</span>
+          </div>
+          <img class="app-frame-img" src="assets/images/landing-forstarkning-desktop.png" alt="Förstärkningsanalys i Restidsanalys">
+        </div>
+        <div class="feature-text">
+          <span class="kicker">Förstärkning</span>
+          <h2>Visa effekten av en ny förbindelse.</h2>
+          <p>
+            Testa nya länkar och jämför hur reach, serviceåtkomst
+            och befolkningsunderlag förändras.
+          </p>
+          <div class="step-list">
+            <div class="step-item">
+              <span class="step-num">01</span>
+              <div class="step-body">
+                <h3>Skissa ny länk</h3>
+                <p>Placera en ny koppling mellan två punkter.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">02</span>
+              <div class="step-body">
+                <h3>Mät tillkommen nytta</h3>
+                <p>Se hur tillgängligheten förändras i människor och service.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">03</span>
+              <div class="step-body">
+                <h3>Ta vidare underlaget</h3>
+                <p>Exportera och använd i dialog, GIS och rapporter.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SÅ FUNGERAR DET -->
     <section id="how" class="how-section">
-      <div class="section-header compact">
-        <span class="section-kicker">Så fungerar det</span>
+      <div class="how-header">
+        <span class="kicker">Så fungerar det</span>
         <h2>Fyra steg från fråga till underlag.</h2>
       </div>
-      <img src="assets/svg/workflow-link.svg" alt="Illustration av arbetsflödet" class="how-illustration">
-      <div class="how-grid">
-        <article>
-          <span>01</span>
-          <h3>Välj plats</h3>
-          <p>Starta från karta, adress eller servicepunkt.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Lägg till data</h3>
-          <p>Använd systemdata eller importera egna serviceställen.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Kör analys</h3>
-          <p>Beräkna reach, kris eller förstärkning.</p>
-        </article>
-        <article>
-          <span>04</span>
-          <h3>Exportera</h3>
-          <p>Ta vidare till GIS, rapport och beslutsmöte.</p>
-        </article>
+      <div class="how-steps">
+
+        <div class="how-step">
+          <div class="how-step-icon">
+            <!-- Icon: map pin with pulse rings -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="1" opacity="0.12"/>
+              <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+              <path d="M32 14c-7.18 0-13 5.82-13 13 0 9.75 13 23 13 23s13-13.25 13-23c0-7.18-5.82-13-13-13z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <circle cx="32" cy="27" r="4" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </div>
+          <div class="how-step-body">
+            <span class="how-step-num">01</span>
+            <h3>Välj plats</h3>
+            <p>Starta från karta, adress eller servicepunkt.</p>
+          </div>
+        </div>
+
+        <div class="how-step">
+          <div class="how-step-icon">
+            <!-- Icon: layers / import data -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="1" opacity="0.12"/>
+              <path d="M14 38l18 9 18-9" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M14 30l18 9 18-9" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M14 22l18-9 18 9-18 9-18-9z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <line x1="44" y1="44" x2="44" y2="52" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <polyline points="40,49 44,53 48,49" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="how-step-body">
+            <span class="how-step-num">02</span>
+            <h3>Lägg till data</h3>
+            <p>Använd systemdata eller importera egna serviceställen.</p>
+          </div>
+        </div>
+
+        <div class="how-step">
+          <div class="how-step-icon">
+            <!-- Icon: isochrone rings / analysis -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="1" opacity="0.12"/>
+              <circle cx="32" cy="32" r="18" stroke="currentColor" stroke-width="1.4" stroke-dasharray="4 3"/>
+              <circle cx="32" cy="32" r="10" stroke="currentColor" stroke-width="1.4" stroke-dasharray="3 2"/>
+              <circle cx="32" cy="32" r="3.5" fill="currentColor"/>
+              <line x1="32" y1="20" x2="32" y2="14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="44" y1="32" x2="50" y2="32" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="how-step-body">
+            <span class="how-step-num">03</span>
+            <h3>Kör analys</h3>
+            <p>Beräkna reach, kris eller förstärkning.</p>
+          </div>
+        </div>
+
+        <div class="how-step">
+          <div class="how-step-icon">
+            <!-- Icon: document export with arrow -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="1" opacity="0.12"/>
+              <rect x="18" y="14" width="22" height="28" rx="2.5" stroke="currentColor" stroke-width="1.6"/>
+              <line x1="24" y1="22" x2="34" y2="22" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <line x1="24" y1="27" x2="34" y2="27" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <line x1="24" y1="32" x2="30" y2="32" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <line x1="40" y1="38" x2="40" y2="52" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <polyline points="35,44 40,38 45,44" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="how-step-body">
+            <span class="how-step-num">04</span>
+            <h3>Exportera</h3>
+            <p>Ta vidare till GIS, rapport och beslutsmöte.</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
+    <!-- SERVICEPUNKTER -->
+    <section id="servicepunkter" class="feature-block alt">
+      <div class="feature-inner">
+        <div class="app-frame">
+          <div class="app-frame-bar">
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-bar-title">Servicepunkter — Restidsanalys</span>
+          </div>
+          <img class="app-frame-img" src="assets/images/landing-servicepunkter-desktop.png" alt="Servicepunkter i Restidsanalys">
+        </div>
+        <div class="feature-text">
+          <span class="kicker">Servicepunkter</span>
+          <h2>Importera era egna platser.</h2>
+          <p>
+            Lägg till vårdcentraler, skolor, apotek eller egna nyckelplatser och se direkt
+            hur många invånare som når varje punkt inom given restid.
+          </p>
+          <div class="step-list">
+            <div class="step-item">
+              <span class="step-num">01</span>
+              <div class="step-body">
+                <h3>Importera egna platser</h3>
+                <p>CSV, GeoJSON eller manuell inmatning direkt i kartan.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">02</span>
+              <div class="step-body">
+                <h3>Se nåbarhet per punkt</h3>
+                <p>Hur många invånare når varje servicepunkt inom given tid?</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">03</span>
+              <div class="step-body">
+                <h3>Exportera som underlag</h3>
+                <p>Tabeller och kartor redo för rapport och dialog.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TÄCKNING -->
     <section class="coverage-section">
-      <div class="coverage-grid">
-        <div>
-          <span class="section-kicker">Täckning</span>
+      <div class="coverage-inner">
+        <div class="coverage-text">
+          <span class="kicker">Täckning</span>
           <h2>Demo med rätt område i fokus.</h2>
           <p>
-            Restidsanalys finns i utvalda regioner och kan demonstreras utifrån befintlig täckning,
-            pilotområde eller kommande behov.
+            Restidsanalys finns i utvalda regioner och kan demonstreras utifrån befintlig
+            täckning, pilotområde eller kommande behov.
           </p>
         </div>
-        <div class="product-shot flat">
-          <img src="assets/landing-preview/coverage-light.webp" alt="Täckningsvy för Restidsanalys">
+        <div class="app-frame">
+          <div class="app-frame-bar">
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-dot"></span>
+            <span class="app-frame-bar-title">Täckningsvy — Restidsanalys</span>
+          </div>
+          <img class="app-frame-img" src="assets/images/landing-coverage-dark.png" alt="Täckningsvy — Restidsanalys">
         </div>
       </div>
     </section>
 
+    <!-- CTA -->
     <section id="cta" class="cta-section">
       <div class="cta-card">
-        <span class="section-kicker">Kom igång</span>
-        <h2>Boka en demo och se hur Restidsanalys fungerar i er region.</h2>
-        <p>
-          Vi visar hur räckvidd, kris och förstärkning fungerar i praktiken och hur analysen kan tas vidare
-          till rapport, dialog och GIS-arbete.
-        </p>
-        <div class="cta-actions">
-          <button type="button" class="btn btn-primary" data-open-contact>Boka demo</button>
-          <button type="button" class="btn btn-secondary" data-open-contact>Kontakta oss</button>
+        <div class="cta-inner">
+          <span class="kicker">Kom igång</span>
+          <h2>Boka en demo och se hur Restidsanalys fungerar i er region.</h2>
+          <p>
+            Vi visar hur räckvidd, kris och förstärkning fungerar i praktiken
+            och hur analysen kan tas vidare till rapport, dialog och GIS-arbete.
+          </p>
+          <div class="cta-actions">
+            <button type="button" class="btn btn-primary" data-open-contact>Boka demo</button>
+            <button type="button" class="btn btn-secondary" data-open-contact>Kontakta oss</button>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <img class="brand-mark small" src="assets/svg/restidsanalys-logo-symbol.svg" alt="" width="34" height="34">
+      <div class="footer-brand brand">
+        <img class="brand-mark small" src="assets/svg/restidsanalys-logo-symbol.svg" alt="" width="32" height="32">
         <span>Restidsanalys</span>
       </div>
+      <div>© 2026 Restidsanalys. Alla rättigheter förbehållna.</div>
       <div>
-        <div>© 2026 Restidsanalys. Alla rättigheter förbehållna.</div>
         <a href="mailto:support@restidsanalys.se">support@restidsanalys.se</a>
+        &ensp;·&ensp;
+        <a href="mailto:support@restidsanalys.se?subject=Disclaimer%20-%20Restidsanalys">Disclaimer</a>
       </div>
-      <a href="mailto:support@restidsanalys.se?subject=Disclaimer%20-%20Restidsanalys">Disclaimer</a>
     </div>
   </footer>
 
+  <!-- LOGIN MODAL -->
   <div class="login-modal" id="loginLockedModal" aria-hidden="true">
     <div class="modal-backdrop" data-close-login></div>
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="loginLockedTitle">
       <button type="button" class="modal-close" data-close-login aria-label="Stäng">×</button>
-      <span class="section-kicker">Inloggning</span>
+      <span class="kicker">Inloggning</span>
       <h2 id="loginLockedTitle">Login är låst för demo.</h2>
-      <p>
-        Plattformen öppnas för pilot- och kundkonton efter demo. Kontakta oss så sätter vi upp rätt åtkomst.
-      </p>
+      <p>Plattformen öppnas för pilot- och kundkonton efter demo. Kontakta oss så sätter vi upp rätt åtkomst.</p>
       <div class="modal-actions">
         <button type="button" class="btn btn-primary" data-open-contact data-close-login>Boka demo</button>
         <a href="mailto:support@restidsanalys.se?subject=Login%20-%20Restidsanalys" class="btn btn-secondary">Mejla oss</a>
@@ -272,11 +433,12 @@
     </div>
   </div>
 
+  <!-- CONTACT DRAWER -->
   <div class="contact-drawer" id="contactDrawer" aria-hidden="true">
     <div class="drawer-backdrop" data-close-contact></div>
     <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="contactDrawerTitle">
       <button type="button" class="modal-close" data-close-contact aria-label="Stäng">×</button>
-      <span class="section-kicker">Kontakt</span>
+      <span class="kicker">Kontakt</span>
       <h2 id="contactDrawerTitle">Begär offert</h2>
       <p>Skicka en kort förfrågan så hör vi av oss till er.</p>
       <form class="drawer-form" id="contactForm">
@@ -297,12 +459,8 @@
           <textarea id="contactMessage" rows="5" required placeholder="Berätta kort om ert ärende."></textarea>
         </label>
         <button type="submit" class="btn btn-primary full">Skicka förfrågan</button>
-        <p class="form-note">
-          Knappen öppnar ett förberett e-postmeddelande direkt i din e-postklient.
-        </p>
-        <p class="form-note">
-          Ni kan även nå oss på <a href="mailto:support@restidsanalys.se">support@restidsanalys.se</a>.
-        </p>
+        <p class="form-note">Knappen öppnar ett förberett e-postmeddelande direkt i din e-postklient.</p>
+        <p class="form-note">Ni kan även nå oss på <a href="mailto:support@restidsanalys.se">support@restidsanalys.se</a>.</p>
       </form>
     </aside>
   </div>
@@ -317,64 +475,47 @@
       document.body.classList.toggle("modal-open", isOpen);
     }
 
-    function openContact() {
-      setModalOpen(contactDrawer, true);
-    }
+    function openContact() { setModalOpen(contactDrawer, true); }
 
-    loginButtons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        setModalOpen(loginModal, true);
-      });
+    loginButtons.forEach(function(btn) {
+      btn.addEventListener("click", function() { setModalOpen(loginModal, true); });
     });
 
-    document.querySelectorAll("[data-open-contact]").forEach(function (button) {
-      button.addEventListener("click", openContact);
+    document.querySelectorAll("[data-open-contact]").forEach(function(btn) {
+      btn.addEventListener("click", openContact);
     });
 
-    document.querySelectorAll("[data-close-login]").forEach(function (button) {
-      button.addEventListener("click", function () {
-        setModalOpen(loginModal, false);
-      });
+    document.querySelectorAll("[data-close-login]").forEach(function(btn) {
+      btn.addEventListener("click", function() { setModalOpen(loginModal, false); });
     });
 
-    document.querySelectorAll("[data-close-contact]").forEach(function (button) {
-      button.addEventListener("click", function () {
-        setModalOpen(contactDrawer, false);
-      });
+    document.querySelectorAll("[data-close-contact]").forEach(function(btn) {
+      btn.addEventListener("click", function() { setModalOpen(contactDrawer, false); });
     });
 
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
         setModalOpen(loginModal, false);
         setModalOpen(contactDrawer, false);
       }
     });
 
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-      event.preventDefault();
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
       const name = document.getElementById("contactName").value.trim();
       const email = document.getElementById("contactEmail").value.trim();
       const organization = document.getElementById("contactOrganization").value.trim();
       const message = document.getElementById("contactMessage").value.trim();
-
       if (!name || !email || !message) return;
-
       const body = [
-        "Hej,",
-        "",
-        "Vi vill kontakta Restidsanalys.",
-        "",
+        "Hej,", "",
+        "Vi vill kontakta Restidsanalys.", "",
         "Namn: " + name,
         "E-post: " + email,
-        "Organisation: " + (organization || "-"),
-        "",
-        "Meddelande:",
-        message,
-        "",
-        "Vänliga hälsningar,",
-        name
+        "Organisation: " + (organization || "-"), "",
+        "Meddelande:", message, "",
+        "Vänliga hälsningar,", name
       ].join("\n");
-
       window.location.href = "mailto:support@restidsanalys.se?subject=" + encodeURIComponent("Kontakt - Restidsanalys") + "&body=" + encodeURIComponent(body);
     });
   </script>
