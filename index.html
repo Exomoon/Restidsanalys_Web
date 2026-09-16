@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restidsanalys – analysera tillgänglighet i tid</title>
-  <meta name="description" content="Analysera nåbarhet, vägavstängningar och nya förbindelser. Restidsanalys visar restid, berörd befolkning och konsekvenser på karta som stöd för planering och beredskap.">
+  <title>Restidsanalys – Geografiskt beslutsstöd</title>
+  <meta name="description" content="Restidsanalys är ett beslutsstöd för kommuner, regioner och samhällsplanering. Förstå tillgänglighet, analysera störningar och testa framtida förbindelser.">
   <link rel="icon" type="image/svg+xml" href="assets/svg/restidsanalys-logo-symbol.svg">
   <link rel="stylesheet" href="original.css">
   <link rel="stylesheet" href="assets/vendor/maplibre-gl.css">
@@ -18,7 +18,7 @@
         <img class="brand-mark" src="assets/svg/restidsanalys-logo-symbol.svg" alt="" width="40" height="40">
         <span>
           <span class="brand-title">Restidsanalys</span>
-          <span class="brand-subtitle">Beslutsstöd för tillgänglighet</span>
+          <span class="brand-subtitle">Geografisk beslutsanalys</span>
         </span>
       </a>
       <div class="nav-links">
@@ -26,7 +26,7 @@
         <a href="#crisis">Kris &amp; störning</a>
         <a href="#reinforcement">Förstärkning</a>
         <button type="button" class="btn btn-secondary btn-small" id="loginLockedButton">Logga in</button>
-        <button type="button" class="btn btn-primary btn-small" data-open-contact>Boka en demo</button>
+        <button type="button" class="btn btn-primary btn-small" data-open-contact>Boka demo</button>
       </div>
     </div>
   </nav>
@@ -45,14 +45,15 @@
       <div class="hero-glow hero-glow-one"></div>
       <div class="hero-glow hero-glow-two"></div>
       <div class="hero-content">
-        <span class="kicker">För planering och beredskap</span>
-        <h1>Förstå tillgänglighet i tid – <em>inte bara i kilometer.</em></h1>
+        <span class="kicker">Beslutsstöd för samhällsplanering</span>
+        <h1>Hur många invånare når viktig service inom <em>15 minuter?</em></h1>
         <p>
-          Analysera hur många som når vård och service inom vald restid. Jämför vad som händer när en förbindelse stängs eller en ny tillkommer. Se konsekvenserna på karta och i tydliga nyckeltal.
+          Analysera verklig tillgänglighet till vård, skolor och annan samhällsservice med gång, cykel, kollektivtrafik och bil. Gå från geografisk fråga till tydligt beslutsunderlag i ett sammanhängande arbetsflöde.
         </p>
         <div class="hero-actions">
-          <button type="button" class="btn btn-primary" data-open-contact>Boka en demo</button>
-          <a href="#how" class="btn btn-ghost">Se hur det fungerar</a>
+          <button type="button" class="btn btn-primary" data-open-contact>Boka demo</button>
+          <button type="button" class="btn btn-secondary" id="heroLoginButton">Logga in</button>
+          <a href="#reach" class="btn btn-ghost">Se hur det fungerar</a>
         </div>
       </div>
     </section>
@@ -61,22 +62,24 @@
     <section class="audience-band">
       <div class="audience-inner">
         <div class="audience-text">
-          <span class="kicker">Tre användningsområden</span>
-          <h2>Från vardagsplanering till förändrade förutsättningar.</h2>
-          <p>Jämför nåbarhet, störningar och nya förbindelser med samma typ av beslutsunderlag.</p>
+          <span class="kicker">För rätt beslutssituationer</span>
+          <h2>För beslut där tillgänglighet, störning och förstärkning behöver bli tydliga.</h2>
+          <p>
+            Restidsanalys används när ni behöver visa konsekvenser, jämföra alternativ och ta fram beslutsunderlag som håller för dialog, planering och vidare GIS-arbete.
+          </p>
         </div>
         <div class="decision-cards">
           <div class="decision-card">
-            <h3>Räckvidd</h3>
-            <p>Vad nås inom 15, 30 eller 60 minuter? Se befolkning och samhällsservice.</p>
+            <h3>Planering och lokalisering</h3>
+            <p>När ni behöver förstå vad som nås från en plats idag, och hur tillgängligheten skiljer sig mellan områden, färdsätt och tidsmål.</p>
           </div>
           <div class="decision-card">
-            <h3>Kris &amp; störning</h3>
-            <p>Vad förändras när en väg eller bro stängs? Se restid och berörd befolkning.</p>
+            <h3>Störning och omledning</h3>
+            <p>När en väg stängs, en länk bryts eller ett nät påverkas, och ni snabbt behöver se vilka invånare, skolor och vårdpunkter som berörs.</p>
           </div>
           <div class="decision-card">
-            <h3>Förstärkning</h3>
-            <p>Vad förändras med en ny förbindelse? Jämför nåbarheten före och efter.</p>
+            <h3>Förstärkning och investering</h3>
+            <p>När ni vill testa en ny förbindelse, jämföra scenarier och visa vilken faktisk förbättring ett förslag ger i tillgång till service och restid.</p>
           </div>
         </div>
       </div>
@@ -86,15 +89,15 @@
     <section class="overview-section">
       <div class="overview-inner">
         <div class="overview-label">
-          <span class="kicker">Arbetsytan</span>
-          <p>Välj plats, färdsätt och scenario. Granska resultatet på karta och ta vidare nyckeltalen till rapport.</p>
+          <span class="kicker">Plattformen</span>
+          <p>En sammanhållen arbetsyta för tillgänglighet, scenarier och beslutsunderlag.</p>
         </div>
         <div class="app-frame overview-frame">
           <div class="app-frame-bar">
             <span class="app-frame-dot"></span>
             <span class="app-frame-dot"></span>
             <span class="app-frame-dot"></span>
-            <span class="app-frame-bar-title">Restidsanalys — arbetsytan</span>
+            <span class="app-frame-bar-title">Restidsanalys — Översikt</span>
           </div>
           <img class="app-frame-img" src="assets/images/landing-product-overview.png" alt="Restidsanalys produktöversikt — komplett applikationsvy">
         </div>
@@ -104,33 +107,33 @@
     <!-- RÄCKVIDD -->
     <section id="reach" class="feature-block wide">
       <div class="feature-inner">
-        <iframe id="reach-frame" class="crisis-frame" src="reach.html" title="Färdigt exempel: räckvidd med kollektivtrafik och gång i Stockholm" scrolling="no"></iframe>
+        <iframe id="reach-frame" class="crisis-frame" src="reach.html" title="Stockholm: interaktiv räckviddsanalys och vad som nås" scrolling="no"></iframe>
         <div class="feature-text">
           <span class="kicker">Räckvidd</span>
-          <h2>Vad nås inom vald restid?</h2>
+          <h2>Vad når invånarna inom vald restid?</h2>
           <p>
-            Se ett exempel på analys från Stockholm. Växla mellan färdiga tidsgränser och se hur många invånare och servicepunkter som nås.
+            Se restidszoner, befolkningsunderlag och samhällsservice utifrån verkliga färdtider — inte bara avstånd.
           </p>
           <div class="step-list">
             <div class="step-item">
               <span class="step-num">01</span>
               <div class="step-body">
                 <h3>Välj utgångspunkt</h3>
-                <p>Utgå från en adress, servicepunkt eller plats i kartan.</p>
+                <p>Adress, servicepunkt eller valfri plats i kartan.</p>
               </div>
             </div>
             <div class="step-item">
               <span class="step-num">02</span>
               <div class="step-body">
                 <h3>Jämför färdsätt</h3>
-                <p>Analysera gång, cykel, bil eller kollektivtrafik.</p>
+                <p>Gång, cykel, bil och kollektivtrafik i samma analysflöde.</p>
               </div>
             </div>
             <div class="step-item">
               <span class="step-num">03</span>
               <div class="step-body">
                 <h3>Se vilka som nås</h3>
-                <p>Få karta och nyckeltal för befolkning och service.</p>
+                <p>Summera befolkning, skolor, vård och kapacitet per tidsintervall.</p>
               </div>
             </div>
           </div>
@@ -141,26 +144,26 @@
     <!-- KRIS & STÖRNING -->
     <section id="crisis" class="feature-block alt wide">
       <div class="feature-inner">
-        <iframe id="crisis-frame" class="crisis-frame" src="crisis.html" title="Färdigt exempel: jämförelse före och efter vägavstängning i Karlstad" scrolling="no"></iframe>
+        <iframe id="crisis-frame" class="crisis-frame" src="crisis.html" title="Karlstad: interaktiv jämförelse före och efter avstängning" scrolling="no"></iframe>
         <div class="feature-text">
           <span class="kicker">Kris &amp; störning</span>
-          <h2>Vad händer när en väg eller bro stängs?</h2>
+          <h2>Vad händer när en viktig väg eller bro stängs?</h2>
           <p>
-            Jämför före och efter i det färdiga Karlstadsexemplet. Se förändrad restid, förlorad nåbarhet och hur många invånare som berörs.
+            Markera avstängningen direkt i kartan och se hur tillgänglighet, befolkning och samhällsservice påverkas.
           </p>
           <div class="step-list">
             <div class="step-item">
               <span class="step-num">01</span>
               <div class="step-body">
                 <h3>Markera avstängningen</h3>
-                <p>Välj den vägsträcka som ska analyseras i arbetsytan.</p>
+                <p>Rita den vägsträcka eller korridor som ska analyseras.</p>
               </div>
             </div>
             <div class="step-item">
               <span class="step-num">02</span>
               <div class="step-body">
                 <h3>Jämför före och efter</h3>
-                <p>Se skillnaden på karta och i tydliga nyckeltal.</p>
+                <p>Se förlorad räckvidd, berörd befolkning och omledning i samma analys.</p>
               </div>
             </div>
           </div>
@@ -171,26 +174,33 @@
     <!-- FÖRSTÄRKNING -->
     <section id="reinforcement" class="feature-block wide">
       <div class="feature-inner">
-        <iframe id="reinforcement-frame" class="crisis-frame" src="reinforcement.html" title="Färdigt exempel: nåbarhet före och efter ny förbindelse i Gävle" scrolling="no"></iframe>
+        <iframe id="reinforcement-frame" class="crisis-frame" src="reinforcement.html" title="Gävle: interaktiv förstärkningsanalys före och efter" scrolling="no"></iframe>
         <div class="feature-text">
           <span class="kicker">Förstärkning</span>
-          <h2>Vad förändras när en ny förbindelse tillkommer?</h2>
+          <h2>Testa nyttan innan investeringen.</h2>
           <p>
-            Växla mellan före och efter i det färdiga Gävleexemplet. Se var nåbarheten ökar och hur många fler invånare som nås inom vald restid.
+            Simulera en ny förbindelse och se hur tillgänglighet, befolkning och samhällsservice förändras innan beslut fattas.
           </p>
           <div class="step-list">
             <div class="step-item">
               <span class="step-num">01</span>
               <div class="step-body">
                 <h3>Lägg till en ny förbindelse</h3>
-                <p>Testa en ny väg, bro eller annan förbindelse i arbetsytan.</p>
+                <p>Koppla samman två punkter och ange restiden för den nya länken.</p>
               </div>
             </div>
             <div class="step-item">
               <span class="step-num">02</span>
               <div class="step-body">
                 <h3>Mät tillkommen tillgänglighet</h3>
-                <p>Jämför tillkommen räckvidd och befolkning före och efter.</p>
+                <p>Se hur många fler invånare och servicepunkter som blir nåbara.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">03</span>
+              <div class="step-body">
+                <h3>Ta vidare underlaget</h3>
+                <p>Exportera resultatet för rapport, dialog eller fortsatt GIS-analys.</p>
               </div>
             </div>
           </div>
@@ -202,7 +212,7 @@
     <section id="how" class="how-section">
       <div class="how-header">
         <span class="kicker">Så fungerar det</span>
-        <h2>Från plats till beslutsunderlag.</h2>
+        <h2>Fyra steg från fråga till underlag.</h2>
       </div>
       <div class="how-steps">
 
@@ -219,7 +229,7 @@
           <div class="how-step-body">
             <span class="how-step-num">01</span>
             <h3>Välj plats</h3>
-            <p>Utgå från karta, adress eller servicepunkt.</p>
+            <p>Starta från karta, adress eller servicepunkt.</p>
           </div>
         </div>
 
@@ -238,7 +248,7 @@
           <div class="how-step-body">
             <span class="how-step-num">02</span>
             <h3>Lägg till data</h3>
-            <p>Använd befintliga geodata eller lägg till egna servicepunkter.</p>
+            <p>Använd systemdata eller komplettera med organisationens egna servicepunkter.</p>
           </div>
         </div>
 
@@ -257,7 +267,7 @@
           <div class="how-step-body">
             <span class="how-step-num">03</span>
             <h3>Kör analys</h3>
-            <p>Välj färdsätt och jämför räckvidd eller scenarier.</p>
+            <p>Analysera räckvidd, kris eller förstärkning.</p>
           </div>
         </div>
 
@@ -277,7 +287,7 @@
           <div class="how-step-body">
             <span class="how-step-num">04</span>
             <h3>Exportera</h3>
-            <p>Ta karta och nyckeltal vidare till rapport eller beslutsmöte.</p>
+            <p>Ta resultatet vidare till rapport, GIS eller beslutsmöte.</p>
           </div>
         </div>
 
@@ -300,23 +310,30 @@
         </div>
         <div class="feature-text">
           <span class="kicker">Servicepunkter</span>
-          <h2>Ta med era egna servicepunkter.</h2>
+          <h2>Komplettera analysen med era egna data.</h2>
           <p>
-            Lägg till skolor, vård och annan service via adress eller eget register. Ange kapacitet när det är relevant för analysen.
+            Sök och placera målpunkter automatiskt via adress, eller importera egna register för skolor, vård och samhällsservice. Lägg till och redigera kapacitet per plats — som elevplatser eller vårdplatser — för att beräkna både tillgänglighet och faktiskt utbud i samma beslutsunderlag.
           </p>
           <div class="step-list">
             <div class="step-item">
               <span class="step-num">01</span>
               <div class="step-body">
-                <h3>Sök eller importera</h3>
-                <p>Hitta platser via adress eller importera ett CSV-register.</p>
+                <h3>Automatisk sökning eller import</h3>
+                <p>Sök upp platser direkt via adress eller importera era egna register som CSV.</p>
               </div>
             </div>
             <div class="step-item">
               <span class="step-num">02</span>
               <div class="step-body">
-                <h3>Ange kapacitet</h3>
-                <p>Jämför tillgång till exempelvis elev- eller vårdplatser.</p>
+                <h3>Ange och redigera kapacitet</h3>
+                <p>Lägg till elevplatser, vårdplatser eller kapacitet per punkt och uppdatera i realtid.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">03</span>
+              <div class="step-body">
+                <h3>Exportera som underlag</h3>
+                <p>Ta vidare tabeller och kartor till rapport, dialog eller fortsatt analys.</p>
               </div>
             </div>
           </div>
@@ -331,7 +348,7 @@
           <span class="kicker">Täckning</span>
           <h2>Nuvarande täckning</h2>
           <p>
-            Se vilka områden som kan analyseras i dag. Välj ett område i kartan för att se namnet.
+            Se var Restidsanalys är tillgängligt idag. Täckningen utökas löpande i takt med nya regioner, datakällor och kundbehov.
           </p>
         </div>
         <div class="app-frame coverage-preview">
@@ -339,7 +356,7 @@
             <span class="app-frame-dot"></span>
             <span class="app-frame-dot"></span>
             <span class="app-frame-dot"></span>
-            <span class="app-frame-bar-title">Täckning just nu</span>
+            <span class="app-frame-bar-title">Täckning just nu — augusti 2026</span>
           </div>
           <div class="coverage-vector-map" id="coverage-map">
             <div class="coverage-live-map" id="coverage-live-map" aria-label="Interaktiv karta över Restidsanalys nuvarande täckning"></div>
@@ -398,13 +415,13 @@
       <div class="cta-card">
         <div class="cta-inner">
           <span class="kicker">Kom igång</span>
-          <h2>Se Restidsanalys med ett scenario från er verksamhet.</h2>
+          <h2>Boka en demo med ett scenario som är relevant för er.</h2>
           <p>
-            Vi visar hur ni kan jämföra restid, nåbarhet och konsekvenser på karta.
+            Se hur Restidsanalys kan användas för tillgänglighet, krisberedskap och framtida investeringar — och hur resultaten tas vidare till tydliga beslutsunderlag.
           </p>
           <div class="cta-actions">
-            <button type="button" class="btn btn-primary" data-open-contact>Boka en demo</button>
-            <a href="#how" class="btn btn-secondary">Se hur det fungerar</a>
+            <button type="button" class="btn btn-primary" data-open-contact>Boka demo</button>
+            <button type="button" class="btn btn-secondary" data-open-contact>Kontakta oss</button>
           </div>
         </div>
       </div>
@@ -422,7 +439,7 @@
       <div>
         <a href="mailto:support@restidsanalys.se">support@restidsanalys.se</a>
         &ensp;·&ensp;
-        <a href="mailto:support@restidsanalys.se?subject=Ansvarsfriskrivning%20-%20Restidsanalys">Ansvarsfriskrivning</a>
+        <a href="mailto:support@restidsanalys.se?subject=Disclaimer%20-%20Restidsanalys">Disclaimer</a>
       </div>
     </div>
   </footer>
@@ -436,8 +453,8 @@
       <h2 id="loginLockedTitle">Åtkomst efter demo</h2>
       <p>Restidsanalys öppnas för pilot- och kundkonton efter en första genomgång. Kontakta oss så hjälper vi er att sätta upp rätt åtkomst.</p>
       <div class="modal-actions">
-        <button type="button" class="btn btn-primary" data-open-contact data-close-login>Boka en demo</button>
-        <a href="mailto:support@restidsanalys.se?subject=Inloggning%20-%20Restidsanalys" class="btn btn-secondary">Mejla oss</a>
+        <button type="button" class="btn btn-primary" data-open-contact data-close-login>Boka demo</button>
+        <a href="mailto:support@restidsanalys.se?subject=Login%20-%20Restidsanalys" class="btn btn-secondary">Mejla oss</a>
       </div>
     </div>
   </div>
@@ -448,8 +465,8 @@
     <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="contactDrawerTitle">
       <button type="button" class="modal-close" data-close-contact aria-label="Stäng">×</button>
       <span class="kicker">Kontakt</span>
-      <h2 id="contactDrawerTitle">Boka en demo</h2>
-      <p>Berätta vad ni vill analysera och vilken organisation ni representerar, så återkommer vi.</p>
+      <h2 id="contactDrawerTitle">Boka demo eller begär offert</h2>
+      <p>Berätta kort om organisationen och vad ni vill analysera, så återkommer vi med ett lämpligt upplägg.</p>
       <form class="drawer-form" id="contactForm">
         <label>
           Namn
