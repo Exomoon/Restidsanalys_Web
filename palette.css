@@ -61,6 +61,7 @@
   .service-preview-media{aspect-ratio:.96}
   .feature-block.wide .service-preview .app-frame-img{width:210%}
   .coverage-preview{max-width:460px;margin-inline:auto}
+  .coverage-vector-map{aspect-ratio:auto;height:clamp(450px,122vw,520px)}
   .coverage-readout{left:10px;bottom:10px;min-width:0;right:10px}
   .coverage-tooltip{display:none}
 }
