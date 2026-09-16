@@ -1,0 +1,68 @@
+/* Original layout is unchanged. This layer adjusts only the colour palette. */
+:root{--bg:#0b1923;--surface:#102430;--surface-2:#152e3c;--border:rgba(159,190,204,.14);--border-md:rgba(159,190,204,.25);--text:#edf4f6;--muted:#a3b8c5;--faint:#829eae;--accent:#72d8c5;--accent-2:#339e8e;--accent-glow:rgba(114,216,197,.16);--teal:#94e6d4}
+.nav{background:rgba(11,25,35,.9)}
+.btn-primary{background:#72d8c5;color:#09292a}.btn-primary:hover{background:#9ce8d8;color:#09292a}
+.hero-overlay{background:linear-gradient(90deg,rgba(7,21,32,.94),rgba(10,29,42,.72) 55%,rgba(11,25,35,.25)),linear-gradient(0deg,#0b1923,transparent 40%)}
+.overview-section{background:linear-gradient(180deg,#102430,#0b1923)}
+.feature-block.alt{background:#102430}
+.cta-inner{background:linear-gradient(135deg,rgba(114,216,197,.09),#102430 70%)}
+.crisis-frame{display:block;width:100%;height:850px;border:0;border-radius:16px;background:transparent;flex:none}
+@media(max-width:700px){.crisis-frame{height:1150px}}
+/* Keep original mobile navigation, but make its visible controls fit 360 px. */
+@media(max-width:480px){.nav-inner{gap:8px;padding-left:12px;padding-right:12px}.nav-links{gap:7px}.brand{gap:7px}.brand-title{font-size:13px}.brand-mark{width:30px;height:30px}.nav-links .btn-small{font-size:11px;padding-left:10px;padding-right:10px;min-height:38px}}
+
+/* Quieter information design: fewer boxes, clearer analysis surfaces. */
+.audience-band,.feature-block,.how-section,.coverage-section{border-color:rgba(159,190,204,.08)}
+.step-list{gap:0;border-top:1px solid rgba(159,190,204,.13)}
+.step-item{border:0;border-bottom:1px solid rgba(159,190,204,.13);border-radius:0;background:transparent;padding:1rem .1rem;transition:background-color .16s ease}
+.step-item:hover{border-color:rgba(159,190,204,.13);background:rgba(114,216,197,.025)}
+.step-num{border:0;background:rgba(114,216,197,.1)}
+.decision-card,.how-step{border-color:rgba(159,190,204,.09);box-shadow:none}
+.decision-card:hover,.how-step:hover{transform:none;border-color:rgba(114,216,197,.18)}
+.app-frame{border-color:rgba(159,190,204,.1);box-shadow:0 24px 64px -30px rgba(0,0,0,.68)}
+.app-frame-bar{border-bottom:0;background:#112834}
+
+/* Focus the service-point example on the guided import workflow. */
+.service-preview{background:#111f2a}
+.service-preview-media{position:relative;aspect-ratio:1.75;overflow:hidden;background:#101f29}
+.feature-block.wide .service-preview .app-frame-img{position:absolute;left:50%;top:50%;width:125%;max-width:none;transform:translate(-50%,-50%);filter:saturate(.78) contrast(.97)}
+
+/* Vector coverage map generated from the canonical coverage GeoJSON. */
+.coverage-preview{border:0;box-shadow:0 26px 70px -34px rgba(0,0,0,.82)}
+.coverage-vector-map{position:relative;overflow:hidden;isolation:isolate;aspect-ratio:740/722;background:#07131c}
+.coverage-vector-map>svg{display:block;width:100%;height:100%;transition:opacity .25s ease}
+.coverage-live-map{position:absolute;inset:0;z-index:2;opacity:0;transition:opacity .25s ease}
+.coverage-vector-map.map-ready .coverage-live-map{opacity:1}
+.coverage-vector-map.map-ready>.coverage-vector-fallback{opacity:0;pointer-events:none}
+.coverage-live-map .maplibregl-canvas{outline:none}
+.coverage-live-map .maplibregl-ctrl-group{overflow:hidden;border:1px solid rgba(159,190,204,.19);border-radius:7px;background:rgba(7,22,31,.88);box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.coverage-live-map .maplibregl-ctrl-group button{width:32px;height:32px;background-color:transparent}
+.coverage-live-map .maplibregl-ctrl-group button+button{border-top-color:rgba(159,190,204,.14)}
+.coverage-live-map .maplibregl-ctrl-icon{filter:invert(1);opacity:.76}
+.coverage-live-map .maplibregl-ctrl-attrib{border-radius:5px 0 0 0;background:rgba(7,22,31,.78);color:#9fb5c0;font-size:9px}
+.coverage-live-map .maplibregl-ctrl-attrib a{color:#b9d8d3}
+.coverage-country{fill:#152731;stroke:#42606b;stroke-opacity:.44;stroke-width:1;vector-effect:non-scaling-stroke}
+.coverage-country--sweden{fill:#18323b;stroke:#78909a;stroke-opacity:.64}
+.coverage-area{fill:#23665f;fill-opacity:.54;stroke:#80cfc0;stroke-opacity:.74;stroke-width:1.15;vector-effect:non-scaling-stroke;cursor:pointer;transition:fill .2s ease,fill-opacity .2s ease,stroke .2s ease,opacity .2s ease,filter .2s ease}
+.coverage-vector-map.is-exploring .coverage-area:not(.is-active){fill-opacity:.22;stroke-opacity:.3;opacity:.68}
+.coverage-area.is-active{fill:#57cdb7;fill-opacity:.76;stroke:#b5fff0;stroke-opacity:1;stroke-width:1.75;filter:drop-shadow(0 0 5px rgba(114,216,197,.58));outline:none}
+.coverage-area:focus-visible{outline:none;stroke:#fff;stroke-width:2.4}
+.coverage-map-labels text{fill:#708994;font:600 12px Inter,system-ui,sans-serif;letter-spacing:.16em;opacity:.54}
+.coverage-map-labels .coverage-map-label--sweden{fill:#a1bbc2;font-size:14px;opacity:.48}
+.coverage-readout{position:absolute;z-index:5;left:14px;bottom:14px;display:flex;align-items:center;gap:10px;min-width:205px;padding:11px 13px;border:1px solid rgba(159,190,204,.17);border-radius:8px;background:rgba(7,22,31,.9);backdrop-filter:blur(10px);box-shadow:0 12px 34px rgba(0,0,0,.32);pointer-events:none}
+.coverage-readout>span{width:7px;height:7px;border-radius:50%;background:#72d8c5;box-shadow:0 0 0 4px rgba(114,216,197,.1)}
+.coverage-readout div{display:grid;line-height:1.25}
+.coverage-readout strong{font-size:11px;font-weight:600;color:#eaf5f4;margin-top:2px}
+.coverage-readout small{font-size:8px;letter-spacing:.06em;text-transform:uppercase;color:#78cdbd}
+.coverage-tooltip{position:absolute;z-index:6;max-width:230px;padding:8px 10px;border:1px solid rgba(181,255,240,.23);border-radius:6px;background:#071820f2;color:#f0faf8;font-size:10px;font-weight:600;line-height:1.3;box-shadow:0 8px 24px rgba(0,0,0,.34);pointer-events:none;transform:translate(10px,10px)}
+
+@media(max-width:680px){
+  .feature-block,.how-section,.coverage-section{padding-top:4.5rem;padding-bottom:4.5rem}
+  .service-preview-media{aspect-ratio:.96}
+  .feature-block.wide .service-preview .app-frame-img{width:210%}
+  .coverage-preview{max-width:460px;margin-inline:auto}
+  .coverage-readout{left:10px;bottom:10px;min-width:0;right:10px}
+  .coverage-tooltip{display:none}
+}
+
+@media(prefers-reduced-motion:reduce){.coverage-area{transition:none}}

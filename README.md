@@ -4,14 +4,14 @@ Statisk landningssida for Restidsanalys, byggd for GitHub Pages eller annan stat
 
 ## Publicering
 
-Publicera innehållet i den här mappen som webbroot:
-
-- `index.html`
-- `style.css`
-- `assets/`
+Publicera hela innehållet i den här mappen som webbroot. Huvudsidan använder
+`original.css` och `palette.css`; de interaktiva analysvyerna ligger i
+`reach.html`, `crisis.html` och `reinforcement.html` med tillhörande JavaScript.
+Gemensamma kartor, filmer, typsnitt och MapLibre-filer ligger i `assets/`.
 
 Hero-filmen ligger i `assets/video/hero.mp4` och ska följa med vid deploy.
-Sidan använder samma mörka premiumriktning som produktlandningen i Next-appen.
+Den interaktiva täckningskartan använder MapLibre och laddar Esris mörka
+baskarta, medan områdesgeometrierna levereras lokalt från `assets/coverage-data.js`.
 
 ## Funktion
 
