@@ -4,7 +4,7 @@ let timers = [];
 const descriptions = {
  baseline: ['79 708', 'invånare nås', 'inom 10 minuter före avstängningen.', 'Grönt: nåbarhet före avstängning · 10 min.'],
  crisis: ['10 520', 'invånare nås', 'inom 10 minuter efter avstängningen.', 'Grönt: nåbarhet efter avstängning · 10 min.'],
- diff: ['69 188', 'färre invånare nås', 'inom 10 minuter efter avstängningen.', 'Rosa: nåddes före, men inte efter inom 10 min.']
+ diff: ['69 188', 'färre invånare nås', 'inom 10 minuter efter avstängningen.', 'Rosa: nåddes inom 10 min före, men kräver längre restid efter.']
 };
 function cancelReplay(){timers.forEach(clearTimeout);timers=[];document.querySelector('#replay').disabled=false;analysis.classList.remove('tracing');}
 function setState(state){analysis.dataset.state=state;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.state===state)));const d=descriptions[state];document.querySelector('#population').textContent=d[0];document.querySelector('#population-label').textContent=d[1];document.querySelector('#stat-context').textContent=d[2];document.querySelector('.state-description').textContent=d[3];}
@@ -33,3 +33,28 @@ function reportHeight(){parent.postMessage({type:'restidsanalys-crisis-height',h
 new ResizeObserver(reportHeight).observe(document.body);addEventListener('load',reportHeight);
 
 addEventListener('resize',()=>{setTimeout(reportHeight,100);setTimeout(reportHeight,350)});
+
+function addRouteTimeLabel() {
+  const route = document.querySelector('.detour');
+  const svg = route?.ownerSVGElement;
+  if (!route || !svg || svg.querySelector('.route-time-label')) return;
+  // The path is illustrated; there is no measured 10-minute point on it.
+  const point = route.getPointAtLength(route.getTotalLength() * .43);
+  const ns = 'http://www.w3.org/2000/svg';
+  const group = document.createElementNS(ns, 'g');
+  group.setAttribute('class', 'route-time-label');
+  group.setAttribute('transform', `translate(${point.x} ${point.y - 23})`);
+  group.setAttribute('aria-hidden', 'true');
+  const background = document.createElementNS(ns, 'rect');
+  Object.entries({ x: -69, y: -15, width: 138, height: 28, rx: 7 }).forEach(([key, value]) => background.setAttribute(key, value));
+  const text = document.createElementNS(ns, 'text');
+  text.setAttribute('y', '4');
+  text.textContent = 'Omledning · 14,9 min';
+  group.append(background, text);
+  svg.append(group);
+  const mobileLabel = document.createElement('span');
+  mobileLabel.className = 'route-mobile-label';
+  mobileLabel.textContent = 'Omledning · 14,9 min';
+  document.querySelector('#map-container')?.append(mobileLabel);
+}
+addRouteTimeLabel();

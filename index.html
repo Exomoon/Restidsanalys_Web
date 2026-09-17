@@ -146,7 +146,7 @@
           <span class="kicker">Kris &amp; störning</span>
           <h2>Vad händer när en väg eller bro stängs?</h2>
           <p>
-            Jämför före och efter i det färdiga Karlstadsexemplet. Se förändrad restid, förlorad nåbarhet och hur många invånare som berörs.
+            Jämför före och efter i det färdiga Karlstadsexemplet. Se förändrad restid och hur många invånare som inte längre nås inom 10 minuter.
           </p>
           <div class="step-list">
             <div class="step-item">
@@ -284,7 +284,7 @@
       </div>
     </section>
 
-    <!-- SERVICEPUNKTER -->
+    <!-- SERVICEPUNKTER / EGNA PLATSER -->
     <section id="servicepunkter" class="feature-block alt wide">
       <div class="feature-inner">
         <div class="app-frame service-preview">
@@ -292,34 +292,59 @@
             <span class="app-frame-dot"></span>
             <span class="app-frame-dot"></span>
             <span class="app-frame-dot"></span>
-            <span class="app-frame-bar-title">Importera servicepunkter — Restidsanalys</span>
+            <span class="app-frame-bar-title">Analys av egna platser — Restidsanalys</span>
           </div>
-          <div class="service-preview-media">
-            <img class="app-frame-img" src="assets/images/landing-servicepunkter-import.png" alt="Guidat flöde för att importera servicepunkter i Restidsanalys">
+          <div class="service-preview-media" role="img" aria-label="Illustration av importflödet: välj datakälla och område, granska träffar och använd servicepunkterna i projektets analys">
+            <div class="service-preview-map" aria-hidden="true"></div>
+            <div class="service-map-label" aria-hidden="true">
+              <span>PROJEKT · STOCKHOLM</span>
+              <strong>Egna platser i analysen</strong>
+            </div>
+            <div class="service-import-window" aria-hidden="true">
+              <div class="service-window-topline"><span>PROJEKTDATA</span><span>IMPORT</span></div>
+              <h3>Importera servicepunkter</h3>
+              <p>Hämta platser från öppen geodata eller lägg till ert eget register.</p>
+              <div class="service-window-tabs"><span class="selected">Automatisk hämtning</span><span>CSV-fil</span></div>
+              <div class="service-window-field"><small>VAD SÖKER DU?</small><strong>Skola <span>⌄</span></strong></div>
+              <div class="service-window-field"><small>VAR SÖKER DU?</small><strong>Stockholm · kommun <span>⌄</span></strong></div>
+              <div class="service-window-action">Sök och granska platser <span>→</span></div>
+              <div class="service-window-foot">Kontrollera träffarna innan de läggs till i projektet.</div>
+            </div>
+            <div class="service-process" aria-hidden="true"><span><b>01</b> Sök</span><i></i><span><b>02</b> Granska</span><i></i><span><b>03</b> Använd i analys</span></div>
           </div>
         </div>
         <div class="feature-text">
-          <span class="kicker">Servicepunkter</span>
-          <h2>Ta med era egna servicepunkter.</h2>
+          <span class="kicker">Verksamhetsdata</span>
+          <h2>Analysera era egna platser.</h2>
           <p>
-            Lägg till skolor, vård och annan service via adress eller eget register. Ange kapacitet när det är relevant för analysen.
+            Lägg till exempelvis skolor, vårdcentraler, fastigheter, depåer eller andra viktiga målpunkter och analysera deras nåbarhet och geografiska tillgänglighet.
           </p>
           <div class="step-list">
             <div class="step-item">
               <span class="step-num">01</span>
               <div class="step-body">
-                <h3>Sök eller importera</h3>
-                <p>Hitta platser via adress eller importera ett CSV-register.</p>
+                <h3>Koppla på era målpunkter</h3>
+                <p>Lägg in egna register eller hämta automatiskt via adress och öppen geodata.</p>
               </div>
             </div>
             <div class="step-item">
               <span class="step-num">02</span>
               <div class="step-body">
-                <h3>Ange kapacitet</h3>
-                <p>Jämför tillgång till exempelvis elev- eller vårdplatser.</p>
+                <h3>Se faktisk räckvidd och täckning</h3>
+                <p>Analysera hur många invånare som når varje plats inom 10, 15 eller 30 minuter.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">03</span>
+              <div class="step-body">
+                <h3>Väg in kapacitet i besluten</h3>
+                <p>Kombinera geografi med elevplatser, vårdplatser eller besöksvolymer för att hitta under- och överutbud.</p>
               </div>
             </div>
           </div>
+          <p class="service-tech-note">
+            Import via CSV, automatisk hämtning eller manuell registrering.
+          </p>
         </div>
       </div>
     </section>
