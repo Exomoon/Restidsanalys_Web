@@ -3,6 +3,7 @@
 .nav{background:rgba(11,25,35,.9)}
 .btn-primary{background:#72d8c5;color:#09292a}.btn-primary:hover{background:#9ce8d8;color:#09292a}
 .hero-overlay{background:linear-gradient(90deg,rgba(7,21,32,.94),rgba(10,29,42,.72) 55%,rgba(11,25,35,.25)),linear-gradient(0deg,#0b1923,transparent 40%)}
+@media(max-width:767px){.hero-overlay{background:linear-gradient(180deg,rgba(7,21,32,.08) 0%,rgba(7,21,32,.39) 31%,rgba(7,21,32,.48) 62%,rgba(7,21,32,.78) 100%)}.hero-content h1{text-shadow:0 2px 14px rgba(2,12,18,.35)}.hero-content p{color:#e8f1f4;text-shadow:0 2px 9px rgba(0,0,0,.8)}}
 .overview-section{background:linear-gradient(180deg,#102430,#0b1923)}
 .feature-block.alt{background:#102430}
 .cta-inner{background:linear-gradient(135deg,rgba(114,216,197,.09),#102430 70%)}
